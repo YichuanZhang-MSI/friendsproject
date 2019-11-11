@@ -1,0 +1,470 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+  /*background-color: #624280;*/
+  background-color: #3F2C2E;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  font-size: 50px;
+  line-height: 1;
+  padding: 50px 0;
+  text-align: center;
+}
+
+h2{
+  font-size: 32px;
+  line-height: 1.5;
+}
+
+nav ul{
+  list-style-type: none;
+}
+
+nav li{
+  /*Your code here */
+  display: inline-block;
+  padding-right: 20px;
+  padding-top: 25px;
+}
+
+nav a{
+  color: white;
+  font-weight: bold;
+  text-decoration: none
+}
+
+nav a:hover{
+  /*text-decoration: underline;*/
+  /*transition: 0.5s;*/
+  border-bottom: 3px solid #F2BF80;
+}
+
+.current{
+  color: #F2BF80;
+  border-bottom: 3px solid #F2BF80;
+}
+
+.skip a{
+  background: white;
+  left: 0;
+  padding: 6px;
+  position: absolute;
+  top: -40px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+}
+
+.skip a:focus{
+  position: absolute;
+  top:0px;
+}
+
+:focus{
+
+  border: 2px solid black;
+}
+
+
+.container{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+
+  grid-template-rows: 80px 100vh 1fr 0.5fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+/*header*/
+#main{
+  grid-area: 2 / 1 / 3 / 7;
+  background-attachment: fixed; /* Parallax effect */
+  background-image: url(../images/about/centralperk.jpg);
+  background-position: center;  /* Parallax effect */
+  background-repeat: no-repeat; /* Parallax effect */
+  background-size: cover;       /* Parallax effect */
+  color: white;
+  height: 100%;                /* Parallax effect */
+}
+
+header h1{
+  color: white;
+  font-size: 100px;
+  line-height: 1.5;
+  padding: 180px 100px 0 100px;
+  text-align: center;
+}
+
+/*header p{
+  color: white;
+  font-size: 24px;
+  padding: 100px 100px 0 100px;
+  text-align: center;
+}*/
+.logo{
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.logo img{
+  height: 80px;
+  width: auto;
+  padding: 8px 0 8px 30px;
+  vertical-align: middle;
+  background-size:contain;
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
+
+.nav { 
+  grid-area: 1 / 1 / 2 / 7;
+  /*background-color: #312140;*/
+  /*background-color: #F2BF80;*/
+  height: 80px;
+  background-image: linear-gradient(to right, #F2BF80 , #3F2C2E);
+  text-align: right;
+}
+.about-image {
+  background: url(../images/about/about.jpg);
+  grid-area: 3 / 1 / 4 / 4;
+  height: 100%;
+  width: 100%;
+  vertical-align: middle;
+  /*margin: 0 auto;*/
+  background-size:cover;
+  overflow: hidden;
+  background-repeat: no-repeat;
+
+}
+.about{
+  grid-area: 3 / 4 / 4 / 7;
+  line-height: 1.8em;
+  padding: 50px;
+}
+.about p{
+  padding-top: 50px;
+}
+
+.rachel {
+  /*background: url(../images/about/rachelfinal.png);*/
+  grid-area: 4 / 1 / 5 / 2;
+}
+.monica {
+  /*background: url(../images/about/monicafinal.png);*/
+  grid-area: 4 / 2 / 5 / 3; 
+}
+.phoebe {
+  /*background: url(../images/about/phoebefinal.png);*/
+  grid-area: 4 / 3 / 5 / 4;
+}
+.ross {
+  /*background: url(../images/about/rossfinal.png);*/
+  grid-area: 4 / 4 / 5 / 5;
+}
+.chandler {
+  /*background: url(../images/about/chandlerfinal.png);*/
+  grid-area: 4 / 5 / 5 / 6;
+}
+.joey {
+  /*background: url(../images/about/joeyfinal.png);*/
+  grid-area: 4 / 6 / 5 / 7;
+}
+.profile{
+  height: auto;
+  width: auto;
+  vertical-align: middle;
+  background-size:contain;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  padding:30px 0;
+}
+
+.div10 { grid-area: 4 / 1 / 5 / 2; }
+.div11 { grid-area: 4 / 2 / 5 / 3; }
+.div12 { grid-area: 4 / 3 / 5 / 4; }
+.div13 { grid-area: 4 / 4 / 5 / 5; }
+.div14 { grid-area: 4 / 5 / 5 / 6; }
+.div15 { grid-area: 4 / 6 / 5 / 7; }
+
+
+.about h2, p{
+  color: white;
+}
+
+.flip-card {
+  background-color: transparent;
+ /* width: 300px;
+  height: 300px;*/
+  /*perspective: 1000px;*/
+}
+
+.flipcard-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);*/
+}
+
+.flipcard:focus .flipcard-inner {
+  transform: rotateY(180deg);
+}
+.flipcard:hover .flipcard-inner {
+  transform: rotateY(180deg);
+}
+
+.flipcard-front, .flipcard-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flipcard-front {
+  background-color: transparent;
+  color: black;
+}
+
+.flipcard-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.flipcard-front img{
+  height: 100%;
+  width: auto;
+  vertical-align: middle;
+  background-size:contain;
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
+
+.flipcard-back h2{
+  font-size: 40px;
+  padding: 15px;
+
+}
+
+.flipcard-back p{
+  font-size: 14px;
+  padding: 0px 10px;
+  line-height: 1.2em;
+
+}
+
+footer{
+  background-color: black;
+  color: white;
+  grid-column: 1 / -1; 
+  grid-row: 5 / auto; 
+  padding: 10px 0;
+  text-align: center;
+}
+footer p{
+  font-size: 8px;
+}
+
+/*-----------------NEWS------------------------*/
+.newscontainer{
+  display: grid;
+  grid-template-columns: 600px 1fr 1fr;
+  grid-template-rows: 80px 1fr 1fr 40px;
+}
+
+.mySlides {display: none}
+.mySlides img {
+  vertical-align: middle;
+  /*position: relative;
+     float: left;*/
+     width:  600px;
+     height: 400px;
+     /*background-position: 50% 50%;*/
+     background-repeat:   no-repeat;
+     background-size:     cover;
+
+}
+
+#newsmain {
+  grid-area: 2/1/3/4;
+}
+
+#newsmain h1{
+  font-size: 50px;
+  line-height: 1;
+  padding: 50px 0;
+  text-align: center;
+  color: white;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  grid-area: 3/1/4/2;
+  max-width: 600px;
+  position: relative;
+  margin: 0;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0,0,0,0.5);
+
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dots{
+  grid-area: 4/1/5/2;
+  width:  600px;
+  text-align:center;
+  padding: 10px;  
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+.newsfooter{
+  grid-row: 5/auto;
+}
+
+
+
+
+
+/*-----------------GALLERY---------------------*/
+.gallerycontainer{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 10vh;
+}
+.galleryrow {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that sits next to each other */
+.gallerycolumn {
+  float: left;
+  width: 50%;
+  padding: 15px;
+}
+
+.galleryrow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+/*.gallerycolumn img {
+  height: 5%;
+  margin-top: 8px;
+  vertical-align: middle;
+}*/
+
+.gallerycolumn img {
+  margin-top: 50px;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+.galleryheader {
+  text-align: center;
+  padding: 32px;
+  color: white;
+}
+
+/*---------------------CONTACT-------------------*/
+.contactcontainer{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 10vh;
+}
+
+#contactnav { 
+  grid-area: 1 / 1 / 2 / 7;
+  background-color: #312140;
+  text-align: right;
+}

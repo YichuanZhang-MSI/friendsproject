@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>News and Events</title>
+</head>
+<body>
+	<div class="skip"><a href="#newsmain">Skip to Main Content</a></div>
+	<div class="newscontainer">
+		<div class="nav">
+			<nav>
+			  <ul>
+			    <li><a href="index.html">About</a></li>
+			    <li><a class="current" href="news.html">News and Events</a></li>
+			    <li><a href="gallery.html">Gallery</a></li>
+			    <li><a href="shop.html">Shop</a></li>
+			  </ul>
+			</nav>
+		</div>
+		<div class="logo">
+			<img src="images/about/Friends-25th-Anniversary-Logo.png" alt="logoimg">
+		</div>
+		<header id="newsmain">
+			<h1>News and Events</h1>
+		</header>
+
+		<div class="slideshow-container">
+		<div class="mySlides fade">
+		  <div class="numbertext">1 / 5</div>
+		  <img src="images/newsandevents/blueman.jpg">
+		  <div class="text">Blue Man Group - Blue Friends Couch</div>
+		</div>
+
+		<div class="mySlides fade">
+		  <div class="numbertext">2 / 5</div>
+		  <img src="images/newsandevents/orangecouch.jpg">
+		  <div class="text">The Famous Orange Couch from Central Perk is Traveling</div>
+		</div>
+
+		<div class="mySlides fade">
+		  <div class="numbertext">3 / 5</div>
+		  <img src="images/newsandevents/potterybarn.jpg">
+		  <div class="text">Pottery Barn Announced a FRIENDS 25th-anniversary Collection</div>
+		</div>
+
+		<div class="mySlides fade">
+		  <div class="numbertext">4 / 5</div>
+		  <img src="images/newsandevents/rs_1024x576-190729072041-1024-Friends-25-Pop-Up-Layout.jpg">
+		  <div class="text">The ‘Friends’ Pop-up in New York City</div>
+		</div>
+
+		<div class="mySlides fade">
+		  <div class="numbertext">5 / 5</div>
+		  <img src="images/newsandevents/rs_1024x624-190812195631-1024x624.friends-coffee-bean-lp.81219.jpg">
+		  <div class="text">The Coffee Bean & Tea Leaf Pop-Up in Los Angeles</div>
+		</div>
+
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+		</div>
+		<div class="dots"> 
+		  <span class="dot" onclick="currentSlide(1)"></span> 
+		  <span class="dot" onclick="currentSlide(2)"></span> 
+		  <span class="dot" onclick="currentSlide(3)"></span>
+		  <span class="dot" onclick="currentSlide(4)"></span> 
+		  <span class="dot" onclick="currentSlide(5)"></span>  
+		</div>
+		<br>
+
+		<footer class="newsfooter">
+		  <p>Designed and Developed by Yichuan Zhang
+		    &copy; Web Design 2019-2020</p>
+		</footer>
+	</div>
+	<script>
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+		  var i;
+		  var slides = document.getElementsByClassName("mySlides");
+		  var dots = document.getElementsByClassName("dot");
+		  if (n > slides.length) {slideIndex = 1}    
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+		      slides[i].style.display = "none";  
+		  }
+		  for (i = 0; i < dots.length; i++) {
+		      dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";  
+		  dots[slideIndex-1].className += " active";
+		}
+	</script>
+
+</body>
+</html>
