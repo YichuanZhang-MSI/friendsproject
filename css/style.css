@@ -4,18 +4,18 @@ html{
 
 body{
   /*background-color: #624280;*/
-  background-color: #3F2C2E;
+  background-color: rgba(63,44,46,1);
   font-size: 18px;
   margin: 0;
   padding: 0;
 }
 
-h1{
+/*h1{
   font-size: 50px;
   line-height: 1;
   padding: 50px 0;
   text-align: center;
-}
+}*/
 
 h2{
   font-size: 32px;
@@ -276,7 +276,7 @@ footer p{
 .newscontainer{
   display: grid;
   grid-template-columns: 600px 1fr 1fr;
-  grid-template-rows: 80px 1fr 1fr 40px;
+  grid-template-rows: 80px 200px 1fr 40px;
 }
 
 .mySlides {display: none}
@@ -292,14 +292,19 @@ footer p{
 
 }
 
-#newsmain {
+
+.newsheader{
   grid-area: 2/1/3/4;
 }
 
-#newsmain h1{
+.newsheader h1{
   font-size: 50px;
   line-height: 1;
-  padding: 50px 0;
+  padding: 32px 0;
+  text-align: center;
+  color: white;
+}
+.newsheader p{
   text-align: center;
   color: white;
 }
@@ -309,7 +314,7 @@ footer p{
   grid-area: 3/1/4/2;
   max-width: 600px;
   position: relative;
-  margin: 0;
+  margin-left: 30px;
 }
 
 /* Next & previous buttons */
@@ -330,7 +335,7 @@ footer p{
 
 /* Position the "next button" to the right */
 .next {
-  right: 0;
+  right: -30px;
   border-radius: 3px 0 0 3px;
 }
 
@@ -346,7 +351,7 @@ footer p{
   padding: 8px 12px;
   position: absolute;
   bottom: 0px;
-  width: 100%;
+  width: 600px;
   text-align: center;
   background-color: rgba(0,0,0,0.5);
 
@@ -366,7 +371,8 @@ footer p{
   grid-area: 4/1/5/2;
   width:  600px;
   text-align:center;
-  padding: 10px;  
+  padding: 10px 0;
+  margin-left: 30px;  
 }
 .dot {
   cursor: pointer;
@@ -413,7 +419,7 @@ footer p{
 .gallerycontainer{
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 10vh;
+  grid-template-rows: 80px 200px;
 }
 .galleryrow {
   box-sizing: border-box;
@@ -451,8 +457,16 @@ footer p{
 
 
 .galleryheader {
+  grid-area: 2/1/3/7;
   text-align: center;
-  padding: 32px;
+  color: white;
+}
+
+.galleryheader h1 {
+  font-size: 50px;
+  line-height: 1;
+  padding: 32px 0;
+  text-align: center;
   color: white;
 }
 
@@ -460,11 +474,78 @@ footer p{
 .contactcontainer{
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 10vh;
+  grid-template-rows: 80px 200px 1fr;
 }
 
-#contactnav { 
-  grid-area: 1 / 1 / 2 / 7;
-  background-color: #312140;
-  text-align: right;
+
+.contactheader {
+  grid-area: 2/1/3/7;
+  text-align: center;
+  color: white;
 }
+
+.contactheader h1 {
+  font-size: 50px;
+  line-height: 1;
+  padding: 32px 0;
+  text-align: center;
+  color: white;
+}
+
+.formcontainer{
+  grid-area: 3/2/4/4;
+}
+
+/*form div{
+    display:inline-block;
+    width: 80%;
+}*/
+
+/*legend h1{
+  color: white;
+  margin-bottom: 10px;
+}*/
+
+
+.bigicon{
+  color: #F2BF80;
+  font-size: 32px;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+button[type=submit]{
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type=submit]{
+  background-color: #45a049;
+}
+
