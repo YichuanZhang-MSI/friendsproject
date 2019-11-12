@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+.column img {
+  margin-top: 12px;
+  width: 100%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <h1>Image Grid</h1>
+</div>
+
+<!-- Photo Grid -->
+<div class="row"> 
+    <div class="column">
+  <img src="images/gallery/gettyimages-1145330-2048x2048.jpg">
+  <img src="images/gallery/gettyimages-51096743-2048x2048.jpg">
+  <img src="images/gallery/gettyimages-51098695-2048x2048.jpg">
+  </div>  
+  <div class="column">
+  <img src="images/gallery/gettyimages-807524-2048x2048.jpg">
+  <img src="images/gallery/gettyimages-908330-2048x2048.jpg">
+  <img src="images/gallery/gettyimages-908371-2048x2048.jpg">
+  </div>
+
+  <div class="column">
+  <img src="images/gallery/gettyimages-51103215-2048x2048.jpg">
+  <img src="images/gallery/gettyimages-51634405-2048x2048.jpg">
+  <img src="images/gallery/gettyimages-138362933-2048x2048.jpg">
+  </div>
+
+  <div class="column">
+    <img src="images/gallery/gettyimages-138363012-2048x2048.jpg">
+    <img src="images/gallery/gettyimages-138363237-2048x2048.jpg">
+    <img src="images/gallery/gettyimages-138363461-2048x2048.jpg">
+  </div>
+</div>
+</body>
+</html>

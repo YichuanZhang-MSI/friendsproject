@@ -8,14 +8,8 @@ body{
   font-size: 18px;
   margin: 0;
   padding: 0;
+/*  overflow-x: hidden;*/
 }
-
-/*h1{
-  font-size: 50px;
-  line-height: 1;
-  padding: 50px 0;
-  text-align: center;
-}*/
 
 h2{
   font-size: 32px;
@@ -71,6 +65,297 @@ nav a:hover{
   border: 2px solid black;
 }
 
+.container{
+
+  display: grid;
+  grid-template-columns: 100px 250px 250px 100px;
+  grid-row-gap: 15px;
+
+  grid-template-rows: 80px auto auto auto auto auto auto auto auto 100px; 
+  width: 100vw; 
+}
+
+.logo{
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.logo img{
+  height: 50px;
+  width: auto;
+  padding: 8px 0 8px 30px;
+  vertical-align: middle;
+  background-size:contain;
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
+
+.nav { 
+  grid-area: 1 / 1 / 2 / 5;
+  /*background-color: #312140;*/
+  /*background-color: #F2BF80;*/
+  height: 80px;
+  background-image: linear-gradient(to right, #F2BF80 , #3F2C2E);
+  text-align: center;
+}
+
+#aboutmain{
+  grid-area: 2 / 1 / 3 / 5;
+  background-image: url(../images/about/centralperkchange.jpg);
+  background-position: center;  
+  background-repeat: no-repeat; 
+  background-size: cover;       
+  color: white;
+  width: 700px;
+}
+
+header h1{
+  color: white;
+  font-size: 50px;
+  line-height: 1.5;
+  padding: 180px 100px 0 100px;
+  text-align: center;
+
+}
+
+.about-image {
+  background: url(../images/about/about.jpg);
+  grid-area: 3 / 1 / 4 / 5;
+  height: 100%;
+  width: 100%;
+  vertical-align: middle;
+  background-size:cover;
+  overflow: hidden;
+  background-repeat: no-repeat;
+
+}
+
+.about{
+  grid-area: 3 / 2 / 4 / 4;
+  line-height: 1.8em;
+  padding: 50px;
+  color:white;
+  text-align: center;
+  background-color: rgba(13,13,13,0.6);
+}
+
+.rachelimg{
+  grid-area: 4 / 2 / 5 / 3;
+  text-align: center;
+}
+.profile.rachel{
+  grid-area: 4 / 3 / 5 / 4;
+}
+.monicaimg {
+  grid-area: 5 / 2 / 6 / 3; 
+  text-align: center;
+}
+.profile.monica{
+  grid-area: 5 / 3 / 6 / 4;
+}
+.phoebeimg {
+  grid-area: 6 / 2 / 7 / 3;
+  text-align: center;
+}
+.profile.phoebe{
+  grid-area: 6 / 3 / 7 / 4;
+}
+.rossimg {
+  grid-area: 7 / 2 / 8 / 3;
+  text-align: center;
+}
+.profile.ross{
+  grid-area: 7 / 3 / 8 / 4;
+}
+.chandlerimg {
+  grid-area: 8 / 2 / 9 / 3;
+  text-align: center;
+}
+.profile.chandler{
+  grid-area: 8 / 3 / 9 / 4;
+}
+.joeyimg {
+  grid-area: 9 / 2 / 10 / 3;
+  text-align: center;
+}
+.profile.joey{
+  grid-area: 9 / 3 / 10 / 4;
+}
+
+.profile{
+  height: auto;
+  width: auto;
+  vertical-align: middle;
+  background-size:contain;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  padding:30px 0;
+}
+
+.flipcard-front{
+  display: none;
+}
+
+.flipcard-back h2{
+  font-size: 40px;
+  padding: 15px;
+  text-align: center;
+  color: white;
+
+}
+
+.flipcard-back p{
+  font-size: 14px;
+  padding: 0px 10px;
+  line-height: 2em;
+  text-align: center;
+  color:white;
+
+}
+
+footer{
+  background-color: black;
+  color: white;
+  grid-column: 1 / -1; 
+  grid-row: 11 / auto; 
+  padding: 10px 0;
+  text-align: center;
+}
+footer p{
+  font-size: 8px;
+}
+
+
+
+/*-----------------NEWS------------------------*/
+
+.temp{
+  display: none;
+}
+
+.dots{
+  display: none;  
+}
+
+.newscontainer{
+  display: grid;
+  grid-template-columns: 100px 250px 250px 100px;
+  grid-template-rows: 80px 200px auto auto auto auto auto auto auto auto auto auto 100px; 
+  grid-row-gap: 15px;
+  width: 100vw; 
+}
+
+.newsheader{
+  grid-area: 2/1/3/5;
+}
+
+.newsheader h1{
+  font-size: 30px;
+  line-height: 1;
+  padding: 32px 0;
+  text-align: center;
+  color: white;
+}
+.newsheader p{
+  text-align: center;
+  color: white;
+}
+
+.news1.pic{
+  display: block;
+  grid-area: 3/2/4/4;
+}
+
+.news1.news-text{
+  display: block;
+  grid-area: 4/2/5/4;
+}
+
+.news1.pic img{
+  width:500px;
+  height: 300px;
+}
+
+.news2.pic{
+  display: block;
+  grid-area: 5/2/6/4;
+}
+
+.news2.news-text{
+  display: block;
+  grid-area: 6/2/7/4;
+}
+
+.news2.pic img{
+  width:500px;
+  height: 300px;
+}
+
+.news3.pic{
+  display: block;
+  grid-area: 7/2/8/4;
+}
+.news3.news-text{
+  display: block;
+  grid-area: 8/2/9/4;
+}
+
+.news3.pic img{
+  width:500px;
+  height: 300px;
+}
+
+.news4.pic{
+  display: block;
+  grid-area: 9/2/10/4;
+}
+
+.news4.news-text{
+  display: block;
+  grid-area: 10/2/11/4;
+}
+
+.news4.pic img{
+  width:500px;
+  height: 300px;
+}
+
+.news5.pic{
+  display: block;
+  grid-area: 11/2/12/4;
+}
+
+.news5.news-text{
+  display: block;
+  grid-area: 12/2/13/4;
+}
+
+.news5.pic img{
+  width:500px;
+  height: 300px;
+}
+
+.news-text{
+  color:white;
+  line-height: 1.5;
+}
+
+.newsfooter{
+  grid-row: 14/auto;
+}
+
+
+
+/*-----------------------------------------------------------------------------------------*/
+
+
+
+
+
+@media screen and (min-width: 800px){
+
+.rachelimg, .monicaimg, .phoebeimg, .rossimg, .chandlerimg, .joeyimg{
+  display: none;
+}
 
 .container{
   display: grid;
@@ -79,18 +364,20 @@ nav a:hover{
   grid-template-rows: 80px 100vh 1fr 0.5fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
+  width: 100vw;
 }
 
 /*header*/
-#main{
+#aboutmain{
   grid-area: 2 / 1 / 3 / 7;
   background-attachment: fixed; /* Parallax effect */
-  background-image: url(../images/about/centralperk.jpg);
+  background-image: url(../images/about/centralperkchange.jpg);
   background-position: center;  /* Parallax effect */
   background-repeat: no-repeat; /* Parallax effect */
   background-size: cover;       /* Parallax effect */
   color: white;
   height: 100%;                /* Parallax effect */
+  width: auto;
 }
 
 header h1{
@@ -99,6 +386,7 @@ header h1{
   line-height: 1.5;
   padding: 180px 100px 0 100px;
   text-align: center;
+
 }
 
 /*header p{
@@ -145,36 +433,39 @@ header h1{
   grid-area: 3 / 4 / 4 / 7;
   line-height: 1.8em;
   padding: 50px;
+  text-align: left;
+  background-color: transparent;
 }
 .about p{
   padding-top: 50px;
 }
 
-.rachel {
+.profile.rachel {
   /*background: url(../images/about/rachelfinal.png);*/
   grid-area: 4 / 1 / 5 / 2;
 }
-.monica {
+.profile.monica {
   /*background: url(../images/about/monicafinal.png);*/
   grid-area: 4 / 2 / 5 / 3; 
 }
-.phoebe {
+.profile.phoebe {
   /*background: url(../images/about/phoebefinal.png);*/
   grid-area: 4 / 3 / 5 / 4;
 }
-.ross {
+.profile.ross {
   /*background: url(../images/about/rossfinal.png);*/
   grid-area: 4 / 4 / 5 / 5;
 }
-.chandler {
+.profile.chandler {
   /*background: url(../images/about/chandlerfinal.png);*/
   grid-area: 4 / 5 / 5 / 6;
 }
-.joey {
+.profile.joey {
   /*background: url(../images/about/joeyfinal.png);*/
   grid-area: 4 / 6 / 5 / 7;
 }
 .profile{
+  display: block;
   height: auto;
   width: auto;
   vertical-align: middle;
@@ -218,6 +509,10 @@ header h1{
 }
 .flipcard:hover .flipcard-inner {
   transform: rotateY(180deg);
+}
+
+.flipcard-front{
+  display: block;
 }
 
 .flipcard-front, .flipcard-back {
@@ -273,9 +568,33 @@ footer p{
 }
 
 /*-----------------NEWS------------------------*/
+
+/*.news1,.news2,.news3,.news4,.news5{
+  display: none;
+}*/
+.news1.pic{display: none;}
+.news2.pic{display: none;}
+.news3.pic{display: none;}
+.news4.pic{display: none;}
+.news5.pic{display: none;}
+
+.news1.news-text{display: none;}
+.news2.news-text{display: none;}
+.news3.news-text{display: none;}
+.news4.news-text{display: none;}
+.news5.news-text{display: none;}
+
+.temp{
+  display: block;
+}
+.dots{
+  display: block;
+}
+
 .newscontainer{
   display: grid;
-  grid-template-columns: 600px 1fr 1fr;
+  /*grid-template-columns: 600px 1fr 1fr;*/
+  grid-template-columns: 1fr 600px 1fr;
   grid-template-rows: 80px 200px 1fr 40px;
 }
 
@@ -311,10 +630,10 @@ footer p{
 
 /* Slideshow container */
 .slideshow-container {
-  grid-area: 3/1/4/2;
+  grid-area: 3/2/4/3;
   max-width: 600px;
   position: relative;
-  margin-left: 30px;
+  /*margin-left: 30px;*/
 }
 
 /* Next & previous buttons */
@@ -335,7 +654,8 @@ footer p{
 
 /* Position the "next button" to the right */
 .next {
-  right: -30px;
+  /*right: -30px;*/
+  right: 0;
   border-radius: 3px 0 0 3px;
 }
 
@@ -368,11 +688,11 @@ footer p{
 
 /* The dots/bullets/indicators */
 .dots{
-  grid-area: 4/1/5/2;
+  grid-area: 4/2/5/3;
   width:  600px;
   text-align:center;
   padding: 10px 0;
-  margin-left: 30px;  
+/*  margin-left: 30px;*/  
 }
 .dot {
   cursor: pointer;
@@ -493,7 +813,7 @@ footer p{
 }
 
 .formcontainer{
-  grid-area: 3/2/4/4;
+  grid-area: 3/3/4/5;
 }
 
 /*form div{
@@ -506,6 +826,10 @@ footer p{
   margin-bottom: 10px;
 }*/
 
+label {
+  color:white;
+/*  padding-left: 50px;*/
+}
 
 .bigicon{
   color: #F2BF80;
@@ -547,5 +871,7 @@ button[type=submit]{
 
 button[type=submit]{
   background-color: #45a049;
+}
+
 }
 
